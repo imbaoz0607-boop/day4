@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Day4｜阿蘇 → 福岡｜獨立編輯頁（重新規劃用）</title>
+  <style>
+    :root{
+      --bg:#f6f7fb;
+      --surface:#ffffff;
+      --text:#111827;
+      --muted:#6b7280;
+      --line:#e5e7eb;
+      --accent:#2563eb;
+      --shadow:0 8px 24px rgba(0,0,0,.08);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", "PingFang TC", "Hiragino Sans", "Helvetica Neue", Arial;
+      line-height:1.6;
+    }
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:22px 8px 26px;}
+    .board{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:var(--surface);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      touch-action:pan-y;
+    }
+    .panel{display:block;padding:16px 8px 18px;}
+    .dayHeader{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:6px 6px 12px;}
+    .dayHeaderRight{margin-left:auto;padding-top:10px}
+    .dayDateRight{color:var(--text);font-size:18px;font-weight:800;line-height:1.2}
+    .dayTitle{display:flex;gap:12px;align-items:center;}
+    .num{
+      width:40px;height:40px;border-radius:14px;
+      display:grid;place-items:center;
+      border:1px solid rgba(96,165,250,.45);
+      background:rgba(96,165,250,.10);
+      font-weight:800;
+    }
+    .tblock{min-width:0;padding-top:2px}
+    .tblock h2{margin:0;font-size:18px;line-height:1.2}
+    .content{padding:0 12px 12px}
+    .timeline{border:1px solid var(--line);border-radius:14px;background:#ffffff;overflow:hidden}
+    .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .linksSection--tight{margin:10px 0 6px}
+    .btn{display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border:1px solid var(--line);border-radius:999px;background:#eef2f7;color:var(--text);text-decoration:none;font-size:13px;font-weight:600;line-height:1.2;white-space:nowrap;transition:background .15s ease, transform .15s ease}
+    .btn:hover{background:#e5e7eb;transform:translateY(-1px)}
+    .btn:active{transform:translateY(0)}
+    .noteBox{margin-top:12px;border:1px dashed #cbd5e1;border-radius:14px;background:#fafafa;padding:16px}
+    .noteTitle{font-weight:800;margin:0 0 6px}
+    .noteText{margin:0;color:var(--muted);font-size:13px}
+
+    .tRow{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:10px 4px;border-bottom:none}
+    .tRow:last-child{border-bottom:none}
+    .time{font-weight:800}
+    .place{font-weight:700}
+    .meta{color:var(--muted);font-size:12px;margin-top:2px}
+
+    .galleryRow{display:flex;gap:8px;overflow-x:auto;padding:0;margin:8px -12px 14px;scroll-snap-type:x mandatory;scroll-padding:12px;-webkit-overflow-scrolling:touch}
+    .galleryRow::-webkit-scrollbar{height:8px}
+    .galleryRow::-webkit-scrollbar-thumb{background:#d1d5db;border-radius:999px}
+    .gItem{flex:0 0 240px;scroll-snap-align:start;cursor:zoom-in;position:relative;border-radius:16px;overflow:hidden}
+    .gItem img{width:100%;height:150px;object-fit:cover;display:block}
+    .gCaption{position:absolute;left:8px;right:8px;bottom:8px;background:rgba(17,24,39,.55);color:#fff;font-size:12px;padding:6px 10px;border-radius:999px;backdrop-filter:blur(2px)}
+
+    .lightbox{position:fixed;inset:0;background:rgba(17,24,39,.82);display:none;align-items:center;justify-content:center;padding:24px;z-index:9999}
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:min(1200px,92vw);max-height:88vh;width:auto;height:auto;display:block;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+    .lightboxClose{position:absolute;top:18px;right:18px;width:42px;height:42px;border:none;border-radius:999px;background:rgba(255,255,255,.92);font-size:24px;line-height:1;cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="board">
+      <section class="panel" id="day4" role="tabpanel" aria-label="Day 4 行程">
+        <div class="dayHeader">
+          <div class="dayTitle"><div class="num">4</div><div class="tblock"><h2>阿蘇 → 福岡｜重新規劃中</h2></div></div>
+          <div class="dayHeaderRight"><div class="dayDateRight">03/26（四）</div></div>
+        </div>
+
+        <div class="content">
+          <div class="timeline" style="padding:12px">
+            <div style="margin:6px 0 14px;border:1px solid var(--line);border-radius:14px;background:#f8fafc;padding:12px 14px">
+              <div style="display:flex;align-items:center;gap:6px;font-weight:800;margin-bottom:4px">⚠️ 火山警戒與天氣</div>
+              <div style="color:var(--muted);font-size:13px;margin-bottom:10px">
+                阿蘇中岳火山口常因噴氣過量關閉，建議出發前一小時務必查看 <strong>阿蘇火山火口規制情報</strong>。
+              </div>
+              <div class="links linksSection--tight" style="margin-top:4px">
+                <a class="btn" href="https://www.jma.go.jp/bosai/volcano/" target="_blank" rel="noopener">🌋 日本氣象廳｜火山資訊</a>
+                <a class="btn" href="https://www.aso-volcano.jp/chinese/index.html" target="_blank" rel="noopener">🏔 阿蘇火山情報</a>
+                <a class="btn" href="https://emergency-weather.yahoo.co.jp/weather/zh-TW/volcano/503/" target="_blank" rel="noopener">🔴 阿蘇火山即時影像</a>
+                <a class="btn" href="day4/%E9%98%BF%E8%98%87%E8%A7%80%E5%85%89%E5%B0%8E%E8%A6%BD%E6%89%8B%E5%86%8A.pdf" target="_blank" rel="noopener">📄 阿蘇觀光導覽手冊</a>
+              </div>
+            </div>
+
+            <div class="tRow">
+                <div class="time">08:30–09:00</div>
+                <div>
+                  <div class="place">Kamenoi Hotel Aso</div>
+                  <div class="meta">．山路爬坡極度耗油。出發前請確認油箱至少有 1/3 以上，避免在山上受困。<br>．導航直接設定為「阿蘇火山火口避難休憩所停車場(Aso Volcano Crater Shelter Parking)」，是最靠近火山口的停車場。<br>．阿蘇公園道路在半山腰的收費站支付¥1,000（含往返與停車費），ETC無法使用。<br>．停車場旁即是避難休憩所，火口區域內唯一的公共廁所在這。</div>
+                </div>
+              </div>
+
+              <div class="galleryRow" aria-label="阿蘇照片" role="list">
+                <div class="gItem" role="listitem" data-full="01.jpg" data-caption="阿蘇公園道路"><img src="01.jpg" alt="阿蘇公園道路" loading="lazy"><div class="gCaption">阿蘇公園道路</div></div>
+                <div class="gItem" role="listitem" data-full="02.jpg" data-caption="阿蘇收費站"><img src="02.jpg" alt="阿蘇收費站" loading="lazy"><div class="gCaption">阿蘇收費站</div></div>
+                <div class="gItem" role="listitem" data-full="03.jpg" data-caption="阿蘇火山口步道"><img src="03.jpg" alt="阿蘇火山口步道" loading="lazy"><div class="gCaption">阿蘇火山口步道</div></div>
+                <div class="gItem" role="listitem" data-full="04.jpg" data-caption="火山避難休憩所"><img src="04.jpg" alt="火山避難休憩所" loading="lazy"><div class="gCaption">火山避難休憩所</div></div>
+              </div>
+
+              <div class="tRow">
+                <div class="time">09:40–10:40</div>
+                <div>
+                  <div class="place">阿蘇中岳火山口</div>
+                  <div class="meta">．火山口海拔高約 1,200m，氣溫會比平地低約5~8 ℃且風力強勁，下車前記得加外套。</div>
+
+                  <div class="meta" style="margin-top:6px">
+                  🌋 參觀亮點與地圖指引<br>
+                  第一火山口 (Nakadake No.1 Crater)：天氣晴朗且氣體濃度低時可清晰看見碧綠色火口湖。<br>
+                  B區 (一般參觀區 B1、B2)：停車場出來即可抵達的近距離觀景台。<br>
+                  E區 (管制備案區)：當 B 區因氣體濃度過高關閉時，可搭乘專用巴士前往此區參觀，距離火山口更近。<br>
+                  砂千里ヶ浜：位於火山口旁的黑色火山灰平原，景觀宛如外星地表。
+                  </div>
+
+                  
+                </div>
+              </div>
+
+              <div class="galleryRow" aria-label="阿蘇火山口照片" role="list">
+                <div class="gItem" role="listitem" onclick="event.stopPropagation();window.open('day4/阿蘇中岳火山口參觀.pdf','_blank')"><img src="111.jpg" alt="阿蘇中岳火山口參觀 PDF 封面" loading="lazy"><div class="gCaption">📄 阿蘇中岳火山口參觀（PDF）</div></div>
+                <div class="gItem" role="listitem" data-full="06.jpg" data-caption="阿蘇火山口步道"><img src="06.jpg" loading="lazy"><div class="gCaption">火山口步道</div></div>
+                <div class="gItem" role="listitem" data-full="07.jpg" data-caption="火山口步道遠景"><img src="07.jpg" loading="lazy"><div class="gCaption">火山口步道遠景</div></div>
+                <div class="gItem" role="listitem" data-full="08.jpg" data-caption="阿蘇火山口標誌"><img src="08.jpg" loading="lazy"><div class="gCaption">阿蘇火山口標誌</div></div>
+                <div class="gItem" role="listitem" data-full="09.jpg" data-caption="中岳火山口"><img src="09.jpg" loading="lazy"><div class="gCaption">中岳火山口</div></div>
+                <div class="gItem" role="listitem" data-full="10.jpg" data-caption="中岳火山口空拍"><img src="10.jpg" loading="lazy"><div class="gCaption">中岳火山口空拍</div></div>
+              </div>
+              </div>
+
+              <div class="tRow">
+                <div class="time">10:45–11:45</div>
+                <div>
+                  <div class="place">草千里ヶ浜＆景觀咖啡</div>
+                  <div class="meta">阿蘇經典草原景觀，可於景觀咖啡短暫休息</div>
+                </div>
+              </div>
+
+              <div class="tRow">
+                <div class="time">12:15–13:00</div>
+                <div>
+                  <div class="place">南阿蘇景觀公路（展望點）</div>
+                  <div class="meta">沿途多個展望點可俯瞰阿蘇外輪山與南阿蘇平原</div>
+                </div>
+              </div>
+
+              <div class="tRow">
+                <div class="time">13:15–14:00</div>
+                <div>
+                  <div class="place">上色見熊野座神社</div>
+                  <div class="meta">石燈籠與杉木林交織的神秘參道</div>
+                </div>
+              </div>
+
+              <div class="tRow">
+                <div class="time">14:00–16:15</div>
+                <div>
+                  <div class="place">前往太宰府</div>
+                  <div class="meta">車程約 2 小時，可於服務區短暫休息</div>
+                </div>
+              </div>
+
+              <div class="tRow">
+                <div class="time">16:15–17:45</div>
+                <div>
+                  <div class="place">太宰府天滿宮</div>
+                  <div class="meta">參拜學問之神菅原道真，散步表參道</div>
+                </div>
+              </div>
+
+              <div class="tRow">
+                <div class="time">17:45–18:30</div>
+                <div>
+                  <div class="place">移動至福岡市區</div>
+                </div>
+              </div>
+
+              <div class="tRow">
+                <div class="time">20:00 前</div>
+                <div>
+                  <div class="place">還車（Budget 天神北）</div>
+                  <div class="meta">入住 Cross Life 博多柳橋</div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightboxClose" id="lightboxClose" aria-label="關閉">×</button>
+    <img id="lightboxImg" src="" alt="放大圖片">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    document.querySelectorAll('.gItem').forEach(item => {
+      item.addEventListener('click', () => {
+        lightboxImg.src = item.dataset.full || item.querySelector('img')?.src || '';
+        lightboxImg.alt = item.dataset.caption || item.querySelector('img')?.alt || '放大圖片';
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.src = '';
+    };
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+    });
+  </script>
+</body>
+</html>
