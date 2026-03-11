@@ -79,6 +79,39 @@
     .lightboxPrev{left:18px}
     .lightboxNext{left:74px}
     .lightboxClose{position:absolute;top:18px;right:18px;width:42px;height:42px;border:none;border-radius:999px;background:rgba(255,255,255,.92);font-size:24px;line-height:1;cursor:pointer}
+
+    .warningCard{
+      margin:6px 0 14px;
+      border:1px solid #dbe3f0;
+      border-radius:18px;
+      background:linear-gradient(180deg,#f8fbff 0%, #f3f7fd 100%);
+      padding:14px 16px;
+      box-shadow:0 4px 14px rgba(37,99,235,.06);
+    }
+    .warningHead{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-weight:900;
+      font-size:16px;
+      margin-bottom:6px;
+      letter-spacing:.2px;
+    }
+    .warningIcon{
+      width:28px;
+      height:28px;
+      border-radius:999px;
+      display:grid;
+      place-items:center;
+      background:rgba(245,158,11,.14);
+      border:1px solid rgba(245,158,11,.24);
+      flex:0 0 28px;
+    }
+    .warningText{
+      color:var(--muted);
+      font-size:13px;
+      margin:0 0 10px;
+    }
   </style>
 </head>
 <body>
@@ -91,12 +124,11 @@
         </div>
 
         <div class="content">
-          <div class="timeline" style="padding:12px">
-            <div style="margin:6px 0 14px;border:1px solid var(--line);border-radius:14px;background:#f8fafc;padding:12px 14px">
-              <div style="display:flex;align-items:center;gap:6px;font-weight:800;margin-bottom:4px">⚠️ 火山警戒與天氣</div>
-              <div style="color:var(--muted);font-size:13px;margin-bottom:10px">
+          <div class="warningCard">
+              <div class="warningHead"><span class="warningIcon">⚠️</span><span>火山警戒與天氣</span></div>
+              <p class="warningText">
                 阿蘇中岳火山口常因噴氣過量關閉，出發前一小時/抵達收費前皆務必查看 <strong>阿蘇火山火口規制情報</strong>。
-              </div>
+              </p>
               <div class="links linksSection--tight" style="margin-top:4px">
                 <a class="btn" href="https://www.jma.go.jp/bosai/volcano/" target="_blank" rel="noopener">🌋 日本氣象廳｜火山資訊</a>
                 <a class="btn" href="https://www.aso-volcano.jp/chinese/index.html" target="_blank" rel="noopener">🏔 阿蘇火山情報</a>
@@ -104,6 +136,8 @@
                 <a class="btn" href="day4/阿蘇觀光導覽手冊.pdf" target="_blank" rel="noopener">📄 阿蘇觀光導覽手冊</a>
               </div>
             </div>
+
+          <div class="timeline" style="padding:12px">
 
               <div class="tRow">
                 <div class="time">08:30–<br>09:00</div>
@@ -124,9 +158,8 @@
                 <div class="time">09:40–<br>10:40</div>
                 <div>
                   <div class="place">阿蘇中岳火山口</div>
-                  <div class="meta">．火山口海拔高約 1,200m，氣溫會比平地低約5~8 ℃且風力強勁，下車前記得加外套。</div>
-
-                  <div class="meta" style="margin-top:6px">
+                  <div class="meta">火山口海拔高約 1,200m，氣溫會比平地低約5~8 ℃且風力強勁，下車前記得加外套。</div>
+                  <div class="meta">
                   🌋 參觀亮點與地圖指引<br>
                   <strong>第一火山口 (Nakadake No.1 Crater)</strong>：天氣晴朗且氣體濃度低時可清晰看見碧綠色火口湖。<br>
                   <strong>B區 (一般參觀區 B1、B2)</strong>：停車場出來即可抵達的近距離觀景台。<br>
