@@ -58,17 +58,18 @@
     .noteTitle{font-weight:800;margin:0 0 6px}
     .noteText{margin:0;color:var(--muted);font-size:13px}
 
-    .tRow{display:grid;grid-template-columns:92px 1fr;gap:6px;padding:10px 4px;border-bottom:none}
+    .tRow{display:grid;grid-template-columns:92px 1fr;gap:6px;padding:10px 4px;border-bottom:none;align-items:start}
+    .tRow > div:last-child{padding-top:0}
     .tRow:last-child{border-bottom:none}
-    .time{font-weight:800;line-height:1.2;white-space:pre-line;text-align:center}
-    .place{font-weight:700}
+    .time{font-weight:800;line-height:1.05;display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;text-align:left;margin-top:0}
+    .place{font-weight:700;line-height:1.2}
     .meta{color:var(--muted);font-size:12px;margin-top:2px}
 
-    .galleryRow{display:flex;gap:8px;overflow-x:auto;padding:0;margin:8px -12px 14px;scroll-snap-type:x mandatory;scroll-padding:12px;-webkit-overflow-scrolling:touch}
+    .galleryRow{display:flex;gap:8px;overflow-x:auto;padding:0 0 0 0;margin:8px -12px 14px -12px;scroll-snap-type:x mandatory;scroll-padding:12px;-webkit-overflow-scrolling:touch}
     .galleryRow::-webkit-scrollbar{height:8px}
     .galleryRow::-webkit-scrollbar-thumb{background:#d1d5db;border-radius:999px}
     .gItem{flex:0 0 240px;scroll-snap-align:start;cursor:zoom-in;position:relative;border-radius:16px;overflow:hidden}
-    .gItem img{width:100%;height:150px;object-fit:cover;display:block}
+    .gItem img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
     .gCaption{position:absolute;left:8px;right:8px;bottom:8px;background:rgba(17,24,39,.55);color:#fff;font-size:12px;padding:6px 10px;border-radius:999px;backdrop-filter:blur(2px)}
 
     .lightbox{position:fixed;inset:0;background:rgba(17,24,39,.82);display:none;align-items:center;justify-content:center;padding:24px;z-index:9999}
@@ -145,14 +146,26 @@
                 <div class="gItem" role="listitem" data-full="day4/09.jpg" data-caption="中岳火山口"><img src="day4/09.jpg" loading="lazy"><div class="gCaption">中岳火山口</div></div>
                 <div class="gItem" role="listitem" data-full="day4/10.jpg" data-caption="中岳火山口空拍"><img src="day4/10.jpg" loading="lazy"><div class="gCaption">中岳火山口空拍</div></div>
               </div>
-              </div>
 
               <div class="tRow">
                 <div class="time">10:45–<br>11:45</div>
                 <div>
-                  <div class="place">草千里ヶ浜＆景觀咖啡</div>
-                  <div class="meta">阿蘇經典草原景觀，可於景觀咖啡短暫休息</div>
+                  <div class="place">草千里ヶ浜</div>
+                  <div class="meta">為了維持草原生態，通常在 3 月初至 3 月中旬 進行「燒山(野焼き)」儀式，新的綠草要到 4 月中下旬後才會逐漸長出。燒山後的地面會呈現焦黑色，景觀像沙漠或特攝片戰鬥場地。</div>
+                  <div class="meta">☕ 草千里咖啡焙煎所 (Kusasenri Coffee Roastery)，大片落地窗可以直接對望火山煙與草原。</div>
                 </div>
+              </div>
+
+              <div class="galleryRow" aria-label="草千里照片" role="list">
+                <div class="gItem" role="listitem" data-full="day4/11.jpg" data-caption="草千里野燒景觀"><img src="day4/11.jpg" loading="lazy"><div class="gCaption">草千里野燒景觀</div></div>
+                <div class="gItem" role="listitem" data-full="day4/12.jpg" data-caption="草千里三月草原"><img src="day4/12.jpg" loading="lazy"><div class="gCaption">草千里三月草原</div></div>
+                <div class="gItem" role="listitem" data-full="day4/13.jpg" data-caption="草千里放牧馬匹"><img src="day4/13.jpg" loading="lazy"><div class="gCaption">草千里放牧馬匹</div></div>
+                <div class="gItem" role="listitem" data-full="day4/14.jpg" data-caption="草千里湖畔景觀"><img src="day4/14.jpg" loading="lazy"><div class="gCaption">草千里湖畔景觀</div></div>
+                <div class="gItem" role="listitem" data-full="day4/15.jpg" data-caption="草千里綠草季"><img src="day4/15.jpg" loading="lazy"><div class="gCaption">草千里綠草季</div></div>
+                <div class="gItem" role="listitem" data-full="day4/16.jpg" data-caption="草千里咖啡焙煎所"><img src="day4/16.jpg" loading="lazy"><div class="gCaption">草千里咖啡焙煎所</div></div>
+                <div class="gItem" role="listitem" data-full="day4/17.jpg" data-caption="咖啡店內景觀窗"><img src="day4/17.jpg" loading="lazy"><div class="gCaption">咖啡店內景觀窗</div></div>
+                <div class="gItem" role="listitem" data-full="day4/18.jpg" data-caption="草千里特色飲品"><img src="day4/18.jpg" loading="lazy"><div class="gCaption">草千里特色飲品</div></div>
+                <div class="gItem" role="listitem" data-full="day4/19.jpg" data-caption="草千里甜點"><img src="day4/19.jpg" loading="lazy"><div class="gCaption">草千里甜點</div></div>
               </div>
 
               <div class="tRow">
