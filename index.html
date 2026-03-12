@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="zh-Hant">
 <head>
@@ -66,17 +67,34 @@
     .meta{
       color:var(--muted);
       font-size:11.5px;
-      margin-top:1px;
+      line-height:1.6;
+      margin:2px 0 0 0;
+      padding-left:16px;
+      text-indent:-16px;
+      display:block;
     }
 
     .metaList{
       color:var(--muted);
       font-size:11.5px;
+      line-height:1.6;
       margin:2px 0 0 0;
-      padding-left:16px;
+      padding-left:0;
+      list-style:none;
     }
     .metaList li{
+      position:relative;
       margin:2px 0;
+      padding-left:16px;
+    }
+    .metaList li::before{
+      content:"•";
+      position:absolute;
+      left:0;
+      top:0.1em; /* micro vertical alignment */
+      width:16px;
+      text-align:center;
+      color:var(--muted);
     }
 
     .galleryRow{display:flex;gap:8px;overflow-x:auto;padding:0 0 0 0;margin:8px -12px 14px -12px;scroll-snap-type:x mandatory;scroll-padding:12px;-webkit-overflow-scrolling:touch}
@@ -237,18 +255,17 @@
                 <div class="gItem" role="listitem" data-full="day4/19.jpg"><img src="day4/19.jpg" loading="lazy" alt="草千里甜點"><div class="gCaption">草千里甜點</div></div>
               </div>
 
-              <details style="margin:6px 0 10px;border:1px dashed #cbd5e1;border-radius:14px;background:#fafafa;padding:10px 14px">
+              <details style="margin:6px -12px 10px;border:1px dashed #cbd5e1;border-radius:14px;background:#fafafa;padding:10px 14px">
                 <summary style="font-weight:800;cursor:pointer">⛩️前往太宰府天滿宮</summary>
                 
               <div class="tRow">
   <div class="time">14:30–<br>16:30</div>
   <div>
     <div class="place">前往太宰府</div>
-    <ul class="metaList">
-      <li>推薦路線：縣道111號 (阿蘇 Panorama Line) 下山，往熊本 / 大津方向行駛。</li>
-      <li>從熊本 IC 或益城熊本空港 IC 進入往福岡方向的高速公路。</li>
-      <li>全程車程約 2 小時。</li>
-      <li>🚗 建議停靠：廣川服務區（SA，上行／福岡方向）。</li>
+   <ul class="metaList">
+  <li>推薦路線：縣道111號(阿蘇Panorama Line)下山，往熊本/大津方向行駛，從熊本IC或益城熊本空港IC進入往福岡方向的高速公路，車程總計約2小時。</li>
+</ul>
+<div class="meta">🚗 建議停靠：廣川服務區（SA，上行／福岡方向）。</div>
     </ul>
   </div>
 </div>
@@ -316,6 +333,23 @@
   </div>
 
 </div>
+              </details>
+
+              <details style="margin:6px -12px 10px;border:1px dashed #cbd5e1;border-radius:14px;background:#fafafa;padding:10px 14px">
+                <summary style="font-weight:800;cursor:pointer">🛍️ 前往鳥栖 Premium Outlets</summary>
+
+                <div class="tRow">
+                  <div class="time">18:00–<br>19:00</div>
+                  <div>
+                    <div class="place">鳥栖 Premium Outlets</div>
+                    <ul class="metaList">
+                      <li>從太宰府開車約 30 分鐘即可抵達。</li>
+                      <li>九州最大規模 Outlet，約 170 間品牌商店。</li>
+                      <li>可以順路購物休息，再返回福岡市區。</li>
+                    </ul>
+                  </div>
+                </div>
+
               </details>
 
           </div>
@@ -543,3 +577,4 @@
   </script>
 </body>
 </html>
+
