@@ -50,6 +50,8 @@
     .content{padding:0 12px 12px}
     .timeline{border:1px solid var(--line);border-radius:14px;background:#ffffff;overflow:hidden}
     .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .navGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px;margin-top:10px}
+    .navGrid .btn{width:100%;justify-content:center}
     .linksSection--tight{margin:10px 0 6px}
     .btn{display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border:1px solid var(--line);border-radius:999px;background:#eef2f7;color:var(--text);text-decoration:none;font-size:13px;font-weight:600;line-height:1.2;white-space:nowrap;transition:background .15s ease, transform .15s ease}
     .btn:hover{background:#e5e7eb;transform:translateY(-1px)}
@@ -350,8 +352,8 @@
 
                 </details>
 
-              <div class="links" style="margin:10px 0 14px">
-  <div style="font-weight:700;font-size:12px;margin:2px 0 6px;color:var(--muted)"></div>
+              <div class="navGrid" style="margin:10px 0 14px">
+  <div style="grid-column:1 / -1;font-weight:700;font-size:12px;margin:2px 0 6px;color:var(--muted)">🚗 Google 行程導航</div>
                 <a class="btn" href="https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=%E4%B8%8A%E8%89%B2%E8%A6%8B%E7%86%8A%E9%87%8E%E5%BA%A7%E7%A5%9E%E7%A4%BE" target="_blank" rel="noopener">🚗 上色見熊野座神社</a>
                 <a class="btn" href="https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=%E7%99%BD%E5%B7%9D%E6%B0%B4%E6%BA%90" target="_blank" rel="noopener">🚗 白川水源</a>
                 <a class="btn" href="https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=%E8%8D%89%E5%8D%83%E9%87%8C%E4%B9%8B%E6%BF%B1%E5%81%9C%E8%BB%8A%E5%A0%B4" target="_blank" rel="noopener">🚗 草千里之濱停車場</a>
